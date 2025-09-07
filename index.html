@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendify – Smart Attendance & Curriculum</title>
+  <style>
+    /* ---------- Reset ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6a11cb, #040f23);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- Navbar ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: rgba(189, 174, 174, 0.05);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #f4f4f4;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li {
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    nav ul li:hover {
+      color: #ffd369;
+      cursor: pointer;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #fafafa, #b20a31);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      padding: 0.9rem 2.5rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 40px;
+      background: linear-gradient(45deg, #ffd369, #ff6f91);
+      color: #2b2d42;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(255, 211, 105, 0.6);
+    }
+
+    .hero button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 30px rgba(255, 111, 145, 0.8);
+    }
+
+    /* ---------- Features ---------- */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: transform 0.4s, box-shadow 0.4s;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(255, 211, 105, 0.5);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #ffd369;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: #f9f9f9;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      font-size: 0.9rem;
+      color: #eee;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Attendify</div>
+    <ul>
+      <li>Home</li>
+      <li>Features</li>
+      <li>Login</li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Attendify</h1>
+    <p>
+      A smart platform for seamless curriculum management and digital attendance.
+      Designed to make education efficient, transparent, and future-ready.
+    </p>
+    <button onclick="showAlert()">Get Started</button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="card">
+      <h3>📱 Digital Attendance</h3>
+      <p>
+        Mark attendance in real-time with GPS verification and prevent proxy
+        entries using secure smart validation.
+      </p>
+    </div>
+    <div class="card">
+      <h3>📊 Performance Tracking</h3>
+      <p>
+        Analyze student progress and teacher activity through powerful analytics
+        dashboards.
+      </p>
+    </div>
+    <div class="card">
+      <h3>🛡 Secure Records</h3>
+      <p>
+        All attendance and academic records are encrypted, ensuring safe cloud
+        storage with easy access.
+      </p>
+    </div>
+    <div class="card">
+      <h3>⚡ Fast & Reliable</h3>
+      <p>
+        Experience instant updates for attendance, curriculum, and reports with
+        high system reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Attendify. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showAlert() {
+      alert("🚀 Welcome to Attendify! Let's make education smarter together.");
+    }
+  </script>
+</body>
+</html>
